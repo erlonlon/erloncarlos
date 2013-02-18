@@ -1,0 +1,55 @@
+
+
+/*
+	Slideshow
+*/
+
+#slides {
+	
+}
+
+.slides_container {
+	width:1160px;
+	overflow:hidden;
+	position:relative;
+	display:none;
+}
+
+.slides_container a {
+	width:1160px;
+	height:400px;
+	display:block;
+}
+.slides_container a img {
+	display:block;
+}
+
+/*
+	Pagination
+*/
+
+.pagination {
+	margin:16px auto 0;
+	width:100px;
+}
+
+.pagination li {
+	float:left;
+	margin:0 2px;
+	list-style:none;
+}
+
+.pagination li a {
+	display:block;
+	width:12px;
+	height:0;
+	padding-top:12px;
+	background-image:url(pagination.png);
+	background-position:0 0;
+	float:left;
+	overflow:hidden;
+}
+
+.pagination li.current a {
+	background-position:0 -12px;
+}

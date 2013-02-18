@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Erloncarlos - Desenvolvedor Web </title>
+<%= stylesheet_link_tag    "application", :media => "all" %>
+<%= javascript_include_tag "application" %>
+
+<%= csrf_meta_tags %>
+
+<!--google analitico-->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-11357390-8']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--google analitico-->
+
+<script>
+		$(function(){
+			$('#slides').slides({
+				preload: true,
+			    preloadImage: '<%= image_tag "loading.gif" %>',
+				play: 5000,
+				pause: 2500,
+				hoverPause: true
+			});
+		});
+	</script>
+
+</head>
+<body class="homepage">
+<div id="wrapper">
+<header id="header">
+	<%= render 'layouts/header' %>
+</header>
+<div id="page">
+	
+	<%= yield %>
+
+
+</div>
+</div>
+<div class="5grid-layout">
+
+<div class="row" id="footer-content">
+	<%= render 'layouts/footer' %>
+
+</div>
+
+</div>
+<div id="copyright" class="5grid-layout">
+<section>
+ <p>&copy; Your Site Name | Images: <a href="http://www.erloncarlos.com" target="_blank">Fotogrph</a> | Design: <a href="http://www.erloncarlos.com" target="_blank">erloncarlos.com</a></p>
+</section>
+</div>
+</body>
+
+</html>
