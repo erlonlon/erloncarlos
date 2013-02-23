@@ -1,0 +1,87 @@
+<div class="5grid-layout">
+<div class="row">
+<div class="12u">
+<div id="banner">
+<!-- barner slider-->
+<%= render 'pages/banner' %>
+
+</div>
+</div>
+</div>
+<div class="5grid-layout">
+<div class="row">
+<div class="3u" id="sidebar1">
+<%= render 'pages/sidebar1' %>
+</div>
+<div class="6u mobileUI-main-content">
+<div id="content">
+
+<section>
+<div class="post">
+  <h2>FALE CONOSCO</h2>
+
+  <% if notice.present? %>
+      
+   <p class="alert_secess">  <%= notice %></p>
+
+ <% end %>
+
+<%= form_for(@contact) do |f| %>
+  <% if @contact.errors.any? %>
+    <div id="error_explanation">
+      <h4><%= pluralize(@contact.errors.count, "error") %> : Não foi possível salvar o registro: veja qual foi o erro !</h4>
+
+      <ul>
+      <% @contact.errors.full_messages.each do |msg| %>
+        <li class="alert_error"><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <fieldset>
+    <label>Nome</label>
+     <%= f.text_field :name %>
+  </fieldset>
+<fieldset>
+
+<label>E-mail</label>
+<%= f.text_field :email %>
+</fieldset>
+
+ <fieldset>
+<label>Assunto</label>
+<%= f.text_field :title %>
+ </fieldset>
+ <fieldset>
+<label>Mensagem</label>
+<%= f.text_area :body  %>
+ </fieldset>
+
+ <p><%= f.captcha %></p>
+ 
+  
+  
+    <%= f.submit 'Enviar contato' , :class => 'button-erlon' %>
+ 
+<% end %>
+
+
+  <p class="button-style"><%= link_to root_path do %>
+       Inicio
+    <% end %></p>
+</div>
+</section>
+</div>
+</div>
+<div class="3u">
+<div id="sidebar2">
+
+<%= render 'pages/sidebar2' %>
+
+
+</div>
+</div>
+</div>
+</div>
+</div>

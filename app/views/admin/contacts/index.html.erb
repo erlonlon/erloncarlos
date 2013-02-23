@@ -1,0 +1,53 @@
+
+<article class="module width_3_quarter">
+<header><h3 class="tabs_involved">Mensagens enviadas do site</h3>
+<ul class="tabs">
+<li><a href="#tab1">Contatos</a></li>
+
+</ul>
+</header>
+
+<div class="tab_container">
+<div id="tab1" class="tab_content">
+	<table class="tablesorter" cellspacing="0"> 
+		<thead> 
+		<tr> 
+		<th></th> 
+		<th>Data</th>
+		<th>Nome</th> 
+		<th>Email</th> 
+		<th>Assunto</th> 
+		<th>Ações</th> 
+		</tr> 
+		</thead> 
+		<tbody>
+		<% if@contacts.present? %>
+		<% @contacts.each  do |c| %> 
+		<tr> 
+		<td><input type="checkbox"></td>
+		<td><%= c.created_at.strftime("%d de %b - %y") %></td> 
+		<td><%= c.name %></td> 
+		<td><%= c.email %></td> 
+		<td><%= c.title %></td> 
+		<td><%= link_to admin_contact_path(c) do %>
+			<%= image_tag "admin/icn_alert_info.png" , :title => "Visualizar contato "%>
+			<% end %>
+		<%= image_tag "admin/icn_trash.png" , :title => "Enviar email" %></td> 
+		</tr> 
+
+         <% end %>  
+		<% end %>
+
+<tr>
+<td colspan="6" align="center"><%= will_paginate @contacts %></td>
+</tr>
+
+		</tbody> 
+	</table>
+	
+</div><!-- end of #tab1 -->
+
+</div><!-- end of .tab_container -->
+
+</article><!-- end of content manager article -->
+<div class="clear"></div>

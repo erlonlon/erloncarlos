@@ -158,7 +158,7 @@ ul.style3 .first {
 /** BUTTON STYLE */
 
 .button-style {
-	margin: 20px 0px 20px 0px;
+	margin: 05px 0px 05px 0px;
 }
 
 .button-style a {
@@ -173,4 +173,139 @@ ul.style3 .first {
 	font-family: 'Abel', sans-serif;
 	font-size: 14px;
 	color: #FFFFFF;
+}
+
+.button-erlon {
+	margin: 05px 0px 05px 0px;
+}
+
+.button-erlon {
+	padding: 7px 20px 7px 20px;
+	background: #FF4500;
+	border-radius: 5px;
+	line-height: normal;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-shadow: 1px 1px 1px #8A8B71;
+	font-family: 'Abel', sans-serif;
+	font-size: 14px;
+	color: #FFFFFF;
+}
+.alert_secess {
+display: block;
+width: 95%;
+margin: 20px 3% 0 3%;
+margin-top: 20px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+background: #E2F6C5 url(admin/icn_alert_success.png) no-repeat;
+background-position: 10px 10px;
+border: 1px solid #79C20D;
+color: #32510F;
+padding: 10px 0;
+text-indent: 40px;
+font-size: 14px;
+}
+
+.alert_error {
+display: block;
+width: 95%;
+margin: 20px 3% 0 3%;
+margin-top: 20px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+background: #F3D9D9 url(admin/icn_alert_error.png) no-repeat;
+background-position: 10px 10px;
+border: 1px solid #D20009;
+color: #7B040F;
+padding: 10px 0;
+text-indent: 40px;
+font-size: 14px;}
+
+fieldset {
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+background: #F6F6F6;
+border: 1px solid #ccc;
+padding: 1% 0%;
+margin: 10px 0;
+}
+
+fieldset label {
+display: block;
+float: left;
+width: 200px;
+height: 25px;
+line-height: 25px;
+text-shadow: 0 1px 0 #fff;
+font-weight: bold;
+padding-left: 10px;
+margin: -5px 0 5px 0;
+text-transform: uppercase;
+}
+
+fieldset input[type=text] {
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+border: 1px solid #BBBBBB;
+height: 20px;
+color: #666666;
+-webkit-box-shadow: inset 0 2px 2px #ccc, 0 1px 0 #fff;
+-moz-box-shadow: inset 0 2px 2px #ccc, 0 1px 0 #fff;
+box-shadow: inset 0 2px 2px #ccc, 0 1px 0 #fff;
+padding-left: 10px;
+background-position: 10px 6px;
+margin: 0;
+display: block;
+float: left;
+width: 94%;
+margin: 0 10px;
+}
+
+fieldset input[type=text]:focus {
+outline: none;
+border: 1px solid #77BACE;
+-webkit-box-shadow: inset 0 2px 2px #ccc, 0 0 10px #ADDCE6;
+-moz-box-shadow: inset 0 2px 2px #ccc, 0 0 10px #ADDCE6;
+box-shadow: inset 0 2px 2px #ccc, 0 0 10px #ADDCE6;
+}
+
+fieldset select {
+width: 96%;
+margin: 0 10px;
+border: 1px solid #bbb;
+height: 20px;
+color: #666666;
+}
+
+fieldset textarea {
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+border: 1px solid #BBBBBB;
+color: #666666;
+-webkit-box-shadow: inset 0 2px 2px #ccc, 0 1px 0 #fff;
+-moz-box-shadow: inset 0 2px 2px #ccc, 0 1px 0 #fff;
+box-shadow: inset 0 2px 2px #ccc, 0 1px 0 #fff;
+padding-left: 10px;
+background-position: 10px 6px;
+margin: 0 0.5%;
+display: block;
+float: left;
+width: 94%;
+height: 100px;
+margin: 0 10px;
+}
+
+fieldset textarea:focus {
+outline: none;
+border: 1px solid #77BACE;
+-webkit-box-shadow: inset 0 2px 2px #ccc, 0 0 10px #ADDCE6;
+-moz-box-shadow: inset 0 2px 2px #ccc, 0 0 10px #ADDCE6;
+box-shadow: inset 0 2px 2px #ccc, 0 0 10px #ADDCE6;
 }

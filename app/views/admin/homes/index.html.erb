@@ -1,0 +1,84 @@
+
+		
+		<article class="module width_full">
+			<header><h3>Status do sistema</h3></header>
+			<div class="module_content">
+				<article class="stats_graph">
+					<img src="http://chart.apis.google.com/chart?chxr=0,0,3000&chxt=y&chs=520x140&cht=lc&chco=76A4FB,80C65A&chd=s:Tdjpsvyvttmiihgmnrst,OTbdcfhhggcTUTTUadfk&chls=2|2&chma=40,20,20,30" width="520" height="140" alt="" />
+				</article>
+				
+				<article class="stats_overview">
+					<div class="overview_today">
+						<p class="overview_day">Today</p>
+						<p class="overview_count">1,876</p>
+						<p class="overview_type">Hits</p>
+						<p class="overview_count">2,103</p>
+						<p class="overview_type">Views</p>
+					</div>
+					<div class="overview_previous">
+						<p class="overview_day">Yesterday</p>
+						<p class="overview_count">1,646</p>
+						<p class="overview_type">Hits</p>
+						<p class="overview_count">2,054</p>
+						<p class="overview_type">Views</p>
+					</div>
+				</article>
+				<div class="clear"></div>
+			</div>
+		</article><!-- end of stats article -->
+
+
+
+<article class="module width_3_quarter">
+<header><h3 class="tabs_involved">Mensagens enviadas do site</h3>
+<ul class="tabs">
+<li><a href="#tab1">Contatos</a></li>
+
+</ul>
+</header>
+
+<div class="tab_container">
+<div id="tab1" class="tab_content">
+	<table class="tablesorter" cellspacing="0"> 
+		<thead> 
+		<tr> 
+		<th></th> 
+		<th>Data</th>
+		<th>Nome</th> 
+		<th>Email</th> 
+		<th>Assunto</th> 
+		<th>Ações</th> 
+		</tr> 
+		</thead> 
+		<tbody>
+		<% if@contacts.present? %>
+		<% @contacts.each  do |c| %> 
+		<tr> 
+		<td><input type="checkbox"></td>
+		<td><%= c.created_at.strftime("%d de %b - %y") %></td> 
+		<td><%= c.name %></td> 
+		<td><%= c.email %></td> 
+		<td><%= c.title %></td> 
+		<td><%= link_to admin_contact_path(c) do %>
+			<%= image_tag "admin/icn_alert_info.png" , :title => "Visualizar contato "%>
+			<% end %>
+		<%= image_tag "admin/icn_trash.png" , :title => "Enviar email" %></td> 
+		</tr> 
+
+         <% end %>  
+		<% end %>
+
+<tr>
+<td colspan="6" align="center"><%= will_paginate @contacts %></td>
+</tr>
+
+		</tbody> 
+	</table>
+	
+</div><!-- end of #tab1 -->
+
+</div><!-- end of .tab_container -->
+
+</article><!-- end of content manager article -->
+<div class="clear"></div>	
+	

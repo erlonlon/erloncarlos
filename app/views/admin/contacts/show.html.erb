@@ -1,0 +1,20 @@
+
+
+<article class="module width_full">
+<header><h3>Detalhes do contato</h3></header>
+<div class="module_content">
+	<h4><%= @contact.created_at.strftime("%d de %b - %y") %></h4>
+	<h3><%= @contact.name %></h3>
+	<h4><%= @contact.email %></h4>
+	<h4><%= @contact.title %></h4>
+	<p><%= @contact.body %></p>
+	<p>
+
+	<%= link_to admin_contacts_path do %>
+	Voltar
+	<% end %>
+	</p>
+
+</div>
+</article><!-- end of styles article -->
+<div class="spacer"></div>

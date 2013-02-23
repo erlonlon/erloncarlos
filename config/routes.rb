@@ -1,7 +1,15 @@
 Erloncarlos::Application.routes.draw do
   
+  resources :contacts
 
   root :to => "pages#index"
+
+  namespace :admin do
+      resources :categories
+      resources :contacts
+      root :to => "homes#index"
+
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

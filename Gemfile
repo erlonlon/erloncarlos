@@ -21,3 +21,9 @@ end
 
 gem 'jquery-rails'
 
+gem 'paperclip'
+gem 'will_paginate'
+gem 'RedCloth'
+gem 'devise'
+gem 'reverse_captcha'
+
