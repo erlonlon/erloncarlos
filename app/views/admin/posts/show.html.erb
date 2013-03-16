@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @post.title %>
+</p>
+
+<p>
+  <b>Subtitle:</b>
+  <%= @post.subtitle %>
+</p>
+
+<p>
+  <b>Published:</b>
+  <%= @post.published %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @post.url %>
+</p>
+
+<p>
+  <b>Ativo:</b>
+  <%=  @post.ativo %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%= textilize @post.body %>
+</p>
+
+

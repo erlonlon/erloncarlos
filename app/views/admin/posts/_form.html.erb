@@ -1,0 +1,80 @@
+<article class="module width_full">
+<header><h3>Cadastro de artigos e notícias</h3></header>
+<div class="module_content">
+
+
+ <%= form_for [:admin, @post] do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error ") %> : Erro ao tentar salva o registro : </h2>
+
+     
+      <% @post.errors.full_messages.each do |msg| %>
+         <h4 class="alert_error"><%= msg %></h4>
+      <% end %>
+     
+    </div>
+  <% end %>
+
+  <div class="imagempost">
+
+ <div id=".media">
+<div class="media">
+<%- @galleries.each do |g| -%>
+  <%= link_to image_tag(g.foto.url(:thumb)) , g.foto.url(:original), :target => "_blank"  %>
+<%- end -%>
+</div>
+</div>
+<%= will_paginate @galleries %>
+
+ </div> 
+ 
+
+  <fieldset>
+<label>Titulo</label>
+<%= f.text_field :title %>
+  </fieldset>
+  <fieldset>
+<label>Sub Titulo</label>
+ <%= f.text_area :subtitle, :rows => "2"  %>
+  </fieldset>
+ <fieldset>   <label>Selecione a categoria</label><br>
+<%= f.collection_select(:category_id, @categories, :id, :name, :prompt => true) %>
+
+
+
+
+</fieldset>
+
+<label>Data de cadastro</label>
+<%= f.date_select :published , :use_short_month => true %>
+ 
+ <fieldset>
+<label>Endereço web</label>
+<%= f.text_field :url %>
+ </fieldset>
+
+
+ 
+ <fieldset>
+<%= f.text_area :body, :rows => "10" %>
+ </fieldset>
+ <fieldset>
+<label>Deixar o artigo oculto ?</label>
+ <%= f.check_box :ativo %>
+ </fieldset> 
+
+  </div>
+      <footer>
+      <div class="submit_link">
+      <%= f.submit 'Salvar registro',:class => 'alt_btn' %>
+    
+      <input type="submit" value="Reset">
+      </div>
+      </footer>
+<% end %>
+
+</article><!-- end of post new article -->  
+
+
+<div class="spacer"></div>

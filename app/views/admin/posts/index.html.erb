@@ -1,0 +1,66 @@
+
+
+
+
+<article class="module width_3_quarter">
+<header><h3 class="tabs_involved">Listagem de artigos </h3>
+<ul class="tabs">
+<li><a href="#tab1">Artigos</a></li>
+
+</ul>
+</header>
+
+<div class="tab_container">
+<div id="tab1" class="tab_content">
+    <table class="tablesorter" cellspacing="0"> 
+        <thead> 
+        <tr> 
+        <th>Ativo</th> 
+       
+       
+        <th>Data cadastro</th> 
+         <th>Titulo</th>
+        <th>Url</th> 
+      
+        <th>Ações</th> 
+        </tr> 
+        </thead> 
+        <tbody>
+        <% if@posts.present? %>
+        <% @posts.each  do |p| %> 
+        <tr> 
+        <td><%= p.ativo %></td>
+        <td><%= p.published.strftime("%d de %b - %y") %></td> 
+        <td><%= p.title %></td> 
+        <td><%= p.url %></td> 
+      
+        <td><%= link_to admin_post_path(p) do %>
+            <%= image_tag "admin/icn_search.png" , :title => "Visualizar registro " %>
+            <% end %>
+             <%= link_to edit_admin_post_path(p) do %>
+      <%= image_tag "admin/icn_edit.png" , :title => "Editar registro " %>
+     
+      <% end %>
+        <%= link_to admin_post_path(p), confirm: 'Deletar arquivo, Tem certeza ?', method: :delete , :title => "Excluir arquivo"  do %>
+       <%= image_tag "admin/icn_trash.png"  %>
+ <%end %>
+   </td> 
+        </tr> 
+
+         <% end %>  
+        <% end %>
+
+<tr>
+<td colspan="6" align="center"><%= will_paginate @posts %></td>
+</tr>
+
+        </tbody> 
+    </table>
+    
+</div><!-- end of #tab1 -->
+
+</div><!-- end of .tab_container -->
+
+</article><!-- end of content manager article -->
+<div class="clear"></div>
+

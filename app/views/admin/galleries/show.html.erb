@@ -1,0 +1,19 @@
+
+
+<article class="module width_full">
+<header><h3>Detalhes da imagem</h3></header>
+<div class="module_content">
+	
+<%= image_tag @gallery.foto.url %>
+<%= image_tag @gallery.foto.url(:medium) %>
+<%= image_tag @gallery.foto.url(:thumb) %>
+	<p>
+
+	<%= link_to admin_galleries_path do %>
+	Voltar
+	<% end %>
+	</p>
+
+</div>
+</article><!-- end of styles article -->
+<div class="spacer"></div>
