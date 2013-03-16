@@ -1,21 +1,41 @@
-<%= form_for(@category) do |f| %>
+
+<article class="module width_full">
+<header><h3>Cadastro de categorias</h3></header>
+<div class="module_content">
+
+  <%= form_for [:admin, @category] do |f| %>
   <% if @category.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@category.errors.count, "error") %> prohibited this category from being saved:</h2>
+      <div id="error_explanation">
+      <h2><%= pluralize(@category.errors.count, "error") %> : Não foi possível salvar o registro no banco:</h2>
 
-      <ul>
+     
       <% @category.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+     <h4 class="alert_error"><%= msg %></h4>
+    
       <% end %>
-      </ul>
-    </div>
+     
+      </div>
   <% end %>
+  
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+      <fieldset>
+
+      <label>Nome</label>
+      <%= f.text_field :name %>
+      </fieldset>
+</div>
+      <footer>
+      <div class="submit_link">
+      <%= f.submit 'Salvar registro',:class => 'alt_btn' %>
+    
+      <input type="submit" value="Reset">
+      </div>
+      </footer>
+  <% end %>  
+
+
+</article><!-- end of post new article -->  
+
+
+<div class="spacer"></div>
+

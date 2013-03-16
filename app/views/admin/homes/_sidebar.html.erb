@@ -4,19 +4,34 @@
 <hr/>
 <h3>Cadastros</h3>
 <ul class="toggle">
-<li class="icn_new_article"><a href="#">New Article</a></li>
-<li class="icn_edit_article"><a href="#">Edit Articles</a></li>
+<li class="icn_new_article"><%= link_to new_admin_category_path do %>
+	Categorias
+	<% end %></li>
+	<li class="icn_new_article"><%= link_to new_admin_type_path do %>
+	Categorias de fotos
+	<% end %></li>
+	<li class="icn_profile"><%= link_to new_admin_gallery_path do %>
+	Imagens
+	<% end %></li>
+<li class="icn_edit_article"><%= link_to new_admin_post_path  do %>
+   Artigos
+   <% end %>
+</li>
 <li class="icn_categories"><a href="#">Categories</a></li>
 <li class="icn_tags"><a href="#">Tags</a></li>
 </ul>
 
 <h3>Relatórios</h3>
 <ul class="toggle">
-<li class="icn_folder"><%= link_to admin_contacts_path do %>
+<li class="icn_categories"><%= link_to admin_contacts_path do %>
 	Contatos<% end %></li>
-<li class="icn_photo"><a href="#">Gallery</a></li>
-<li class="icn_audio"><a href="#">Audio</a></li>
-<li class="icn_video"><a href="#">Video</a></li>
+<li class="icn_categories"><%= link_to admin_categories_path do %>
+	Categorias<% end %></li>
+	<li class="icn_profile"><%= link_to admin_galleries_path do %>
+	Imagens<% end %></li>
+<li class="icn_edit_article"><%= link_to admin_posts_path do %>
+	Artigos<% end %></li>
+<li class="icn_categories"><a href="#">Video</a></li>
 </ul>
 <h3>Usuários</h3>
 <ul class="toggle">

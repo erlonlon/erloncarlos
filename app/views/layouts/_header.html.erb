@@ -2,8 +2,10 @@
 <div class="row">
 <div class="12u" id="logo"> <!-- Logo -->
 <h1><%= link_to root_path, :class =>"mobileUI-site-name" do %>
-	Erlon Carlos<% end %></h1>
-<p>www.erloncarlos.com</p>
+	<%= image_tag 'logoerloncarlos.png', :size => "600x100" %>
+	<% end %>
+</h1>
+
 </div>
 </div>
 </div>
@@ -19,7 +21,7 @@
 	<% end %>
 
 	</li>
-	<li>	<%= link_to root_path do %>
+	<li>	<%= link_to posts_path do %>
 	Artigos
 	<% end %></li>
 	<li>	<%= link_to contacts_path do %>

@@ -60,16 +60,16 @@
 
  <p><%= f.captcha %></p>
  
-  
+  <p class="button-style">
   
     <%= f.submit 'Enviar contato' , :class => 'button-erlon' %>
- 
+  <%= link_to root_path do %>
+       Inicio
+    <% end %></p>
 <% end %>
 
 
-  <p class="button-style"><%= link_to root_path do %>
-       Inicio
-    <% end %></p>
+ 
 </div>
 </section>
 </div>

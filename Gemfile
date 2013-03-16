@@ -21,7 +21,7 @@ end
 
 gem 'jquery-rails'
 
-gem 'paperclip'
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 gem 'will_paginate'
 gem 'RedCloth'
 gem 'devise'

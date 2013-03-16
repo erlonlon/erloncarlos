@@ -2,8 +2,17 @@
            <div id="slides">
 
 	       <div class="slides_container">
-			<a href="#"><%= image_tag "pics01.jpg" %></a>
-			<a href="#"><%= image_tag "pics02.jpg" %></a>
+	   
+          <% @galleries.each do |g| %>
+
+                <%= link_to root_path do %>
+                    <%= image_tag(g.foto.url(:small)) %>
+                 <% end %>
+
+          <% end %>
+
+
+         
           </div>
          </div>
 		</div>

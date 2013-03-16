@@ -7,10 +7,15 @@
 //= require admin/hideshow
 //= require admin/jquery.textile.image
 
-
-
-
 // APP
 //= require_tree.
 //= require_self
+
+$(function(){
+  $(".media").insertTextileImageTo("#post_body");
+});
+
+$(function(){
+  $(".media").insertTextileImageTo("#post_subtitle");
+});
 

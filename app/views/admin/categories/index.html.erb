@@ -1,23 +1,61 @@
-<h1>Listing categories</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<article class="module width_3_quarter">
+<% if notice.present? %>
+  <h4 class="alert_success"><%= notice %></h4>
+  <% end %>
+<header><h3 class="tabs_involved">Categorias cadastradas</h3>
+<ul class="tabs">
+<li><%= link_to new_admin_category_path, :title => "Criar novo registro" do %>
+  Novo registro<% end %></li>
 
-<% @categories.each do |category| %>
-  <tr>
-    <td><%= category.name %></td>
-    <td><%= link_to 'Show', category %></td>
-    <td><%= link_to 'Edit', edit_category_path(category) %></td>
-    <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+</ul>
+</header>
 
-<br />
+<div class="tab_container">
+<div id="tab1" class="tab_content">
+  <table class="tablesorter" cellspacing="0"> 
+    <thead> 
+    <tr>   
+    <th>Código</th>
+    <th>Nome</th>    
+    <th>Ações</th> 
+    </tr> 
+    </thead> 
+    <tbody>
+    <% if@categories.present? %>
+    <% @categories.each  do |c| %> 
+    <tr> 
+  
+    <td width="100px"><%= c.id %></td>
+    <td><%= c.name %></td> 
+    
+    <td width="120px">
+      <%= link_to edit_admin_category_path(c) do %>
+      <%= image_tag "admin/icn_edit.png" , :title => "Editar registro " %>
+     
+      <% end %>
+       
+      <%= link_to admin_category_path(c), confirm: 'Deletar arquivo, Tem certeza ?', method: :delete , :title => "Excluir arquivo"  do %>
+       <%= image_tag "admin/icn_trash.png"  %>
+     
+      <% end %>
+   </td> 
+       
+    </tr> 
 
-<%= link_to 'New Category', new_category_path %>
+         <% end %>  
+    <% end %>
+
+<tr>
+<td colspan="6" align="center"><%= will_paginate @categories %></td>
+</tr>
+
+    </tbody> 
+  </table>
+  
+</div><!-- end of #tab1 -->
+
+</div><!-- end of .tab_container -->
+
+</article><!-- end of content manager article -->
+<div class="clear"></div>
