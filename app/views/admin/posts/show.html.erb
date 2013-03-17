@@ -1,33 +1,21 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <b>Title:</b>
-  <%= @post.title %>
-</p>
+<article class="module width_full">
+<header><h3>Detalhes do artigo</h3></header>
+<div class="module_content">
+  <h4><%= @post.published.strftime("%d de %b - %y") %></h4>
+  <h3>  <%= @post.title %></h3>
+  <h4> <%= textilize @post.subtitle %></h4>
+  <h4> <%= @post.url %></h4>
+  <p> <%= textilize @post.body %></p>
+  <p>
 
-<p>
-  <b>Subtitle:</b>
-  <%= @post.subtitle %>
-</p>
+  <%= link_to admin_posts_path do %>
+  Voltar
+  <% end %>
+  </p>
 
-<p>
-  <b>Published:</b>
-  <%= @post.published %>
-</p>
-
-<p>
-  <b>Url:</b>
-  <%= @post.url %>
-</p>
-
-<p>
-  <b>Ativo:</b>
-  <%=  @post.ativo %>
-</p>
-
-<p>
-  <b>Body:</b>
-  <%= textilize @post.body %>
-</p>
+</div>
+</article><!-- end of styles article -->
+<div class="spacer"></div>
 
 

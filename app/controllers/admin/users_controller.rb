@@ -1,6 +1,6 @@
 class Admin::UsersController < Admin::BaseController
   def index
-    @users = User.all
+    @users = User.paginate page: params[:page], :per_page => 6
     respond_with @users
   end
 
@@ -8,7 +8,11 @@ class Admin::UsersController < Admin::BaseController
    @user = User.new
    respond_with @user
   end
+   def show
 
+    @user = User.find(params[:id])
+    respond_with @user
+   end
   
 
   def edit

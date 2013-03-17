@@ -1,23 +1,60 @@
-<h1>Listing users</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<article class="module width_3_quarter">
+<header><h3 class="tabs_involved">Lista de usuários do site</h3>
+<ul class="tabs">
+<li><a href="#tab1">Usuários</a></li>
 
-<% @users.each do |user| %>
-  <tr>
-    <td><%= user.name %></td>
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+</ul>
+</header>
 
-<br />
+<div class="tab_container">
+<div id="tab1" class="tab_content">
+  <table class="tablesorter" cellspacing="0"> 
+    <thead> 
+    <tr> 
+    <th></th> 
+    <th>Data</th>
+    <th>Nome</th> 
+    <th>Email</th> 
+     
+    <th>Ações</th> 
+    </tr> 
+    </thead> 
+    <tbody>
+    <% if@users.present? %>
+    <% @users.each  do |c| %> 
+    <tr> 
+    <td><input type="checkbox"></td>
+    <td><%= c.created_at.strftime("%d de %b - %y") %></td> 
+    <td><%= c.name %></td> 
+    <td><%= c.email %></td> 
+     
+    <td><%= link_to admin_user_path(c) do %>
+            <%= image_tag "admin/icn_search.png" , :title => "Visualizar registro " %>
+            <% end %>
+             <%= link_to edit_admin_user_path(c) do %>
+      <%= image_tag "admin/icn_edit.png" , :title => "Editar registro " %>
+     
+      <% end %>
+        <%= link_to admin_user_path(c), confirm: 'Deletar arquivo, Tem certeza ?', method: :delete , :title => "Excluir arquivo"  do %>
+       <%= image_tag "admin/icn_trash.png"  %>
+ <%end %>
+   </td> 
+    </tr> 
 
-<%= link_to 'New User', new_user_path %>
+         <% end %>  
+    <% end %>
+
+<tr>
+<td colspan="6" align="center"><%= will_paginate @users %></td>
+</tr>
+
+    </tbody> 
+  </table>
+  
+</div><!-- end of #tab1 -->
+
+</div><!-- end of .tab_container -->
+
+</article><!-- end of content manager article -->
+<div class="clear"></div>
