@@ -61,8 +61,11 @@
 	
 	<section id="secondary_bar">
 		<div class="user">
-			<p>Seja Bem Vindo -</p>
-			 <a class="logout_user" href="#" title="Logout">Logout</a> 
+			<p>Seja Bem Vindo - </p>
+			 
+			 <%= link_to  destroy_user_session_path, :method => :delete, :class =>"logout_user", :title => "Sair do sistema"  do %>
+                    <span>Sair</span>
+                    <% end %> 
 		</div>
 		<div class="breadcrumbs_container">
 			<article class="breadcrumbs">

@@ -45,7 +45,9 @@
 <li >Ip: </li>
 <li >Ultino acesso :</li>
 <li class="icn_jump_back"> 
+                   <%= link_to  destroy_user_session_path, :method => :delete, :title => "Sair do sistema"  do %>
                     <span>Sair</span>
+                    <% end %> 
                      </li>
 </ul>
 
