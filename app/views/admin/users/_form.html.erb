@@ -1,12 +1,11 @@
 <article class="module width_full">
-<header><h3>Cadastro de categorias</h3></header>
+<header><h3>Cadastro de usuaários</h3></header>
 <div class="module_content">
 
   <%= form_for [:admin, @user] do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
      
       <% @user.errors.full_messages.each do |msg| %>
        <h4 class="alert_error"><%= msg %></h4>
