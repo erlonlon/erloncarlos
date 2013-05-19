@@ -1,0 +1,28 @@
+ <div id="latest">
+    <% @galleries.each do |g| %>
+    <ul>
+      <li>
+       
+        <p class="imgholder">
+          <a href="<%= image_path g.foto.url(:small) %>" rel="lightbox[roadtrip]" title="<%= g.title %> " > 
+            <%= image_tag g.foto.url(:medium) %>
+      </a>
+        </p>
+        
+      </li>
+     
+    
+    </ul>
+    <% end %>
+
+
+   
+
+    <br class="clear" />
+     <div align="center"><%= will_paginate @galleries %></div>
+      <p> <%= link_to root_path do %>
+    Inicio
+    <% end %></p>
+  </div>
+
+ 

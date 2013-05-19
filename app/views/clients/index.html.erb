@@ -1,0 +1,20 @@
+   <div id="latest">
+    <% @types_clientes.galleries.each do |g| %>
+    <ul>
+      <li>
+        <h2><%= g.title %></h2>
+        <p class="imgholder">
+          <a href="<%= g.url %>" title="<%= g.title %>" target="_blank"><%= image_tag g.foto.url(:medium) %></a>
+        </p>
+        <p><%= g.body %>  <a href="#">Veja &raquo;</a></p>
+      </li>
+     
+    
+    </ul>
+    <% end %>
+    <p> <%= link_to root_path do %>
+    Inicio
+    <% end %></p>
+    <br class="clear" />
+  </div>
+

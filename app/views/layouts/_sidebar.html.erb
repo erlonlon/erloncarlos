@@ -1,0 +1,35 @@
+<div class="subnav">
+<h2>Menu de Navegação</h2>
+<% @categories.each do |c| %>
+<ul>
+<li><%= link_to_unless_current c.name, posts_path(:category_id => c.id) %>
+</li>
+
+</ul>
+<% end %>
+</div>
+<div class="sponsors">
+<h2>Publicidade</h2>
+<div class="b_125">
+<ul>
+<li><script type="text/javascript">
+	bb_bid = "1680108";
+	bb_lang = "pt-BR";
+	bb_name = "custom";
+	bb_limit = "6";
+	bb_format = "bbn";
+</script>
+<script type="text/javascript" src="http://static.boo-box.com/javascripts/embed.js"></script></li>
+
+<li class="last"><a href="#"><script type="text/javascript">
+	bb_bid = "1680108";
+	bb_lang = "pt-BR";
+	bb_name = "custom";
+	bb_limit = "6";
+	bb_format = "bbn";
+</script>
+<script type="text/javascript" src="http://static.boo-box.com/javascripts/embed.js"></script></li>
+</ul>
+<div class="clear"></div>
+</div>
+</div>
