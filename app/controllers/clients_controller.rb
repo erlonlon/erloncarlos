@@ -30,7 +30,7 @@ class ClientsController < ApplicationController
     @types_clientes = Type.find(2)
    
      @galleries_servicos = Type.find(3)
-       @galleries_eventos = Type.find(4)
+     @galleries_clientes = Type.find(5)
 
 
 
