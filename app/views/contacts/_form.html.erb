@@ -1,87 +1,71 @@
-<div class="5grid-layout">
-<div class="row">
-<div class="12u">
-<div id="banner">
-<!-- barner slider-->
-<%= render 'pages/banner' %>
+<div class="container">
+<div class="content">     
 
-</div>
-</div>
-</div>
-<div class="5grid-layout">
-<div class="row">
-<div class="3u" id="sidebar1">
-<%= render 'pages/sidebar1' %>
-</div>
-<div class="6u mobileUI-main-content">
-<div id="content">
+<h2>Entre em contato com a nossa empresa deixe aqui suas dúvidas sugestões ou reclamações</h2>
+<div id="respond">
+    <% if notice.present? %>
 
-<section>
-<div class="post">
-  <h2>FALE CONOSCO</h2>
+    <p class="alert_secess">  <%= notice %></p>
 
-  <% if notice.present? %>
-      
-   <p class="alert_secess">  <%= notice %></p>
+    <% end %>
 
- <% end %>
-
-<%= form_for(@contact) do |f| %>
-  <% if @contact.errors.any? %>
+    <%= form_for(@contact) do |f| %>
+    <% if @contact.errors.any? %>
     <div id="error_explanation">
-      <h4><%= pluralize(@contact.errors.count, "error") %> : Não foi possível salvar o registro: veja qual foi o erro !</h4>
+    <h4><%= pluralize(@contact.errors.count, "error") %> : Não foi possível salvar o registro: veja qual foi o erro !</h4>
 
-      <ul>
-      <% @contact.errors.full_messages.each do |msg| %>
-        <li class="alert_error"><%= msg %></li>
-      <% end %>
-      </ul>
+    <ul>
+    <% @contact.errors.full_messages.each do |msg| %>
+    <li class="alert_error"><%= msg %></li>
+    <% end %>
+    </ul>
     </div>
-  <% end %>
+    <% end %>
 
-  <fieldset>
+    
     <label>Nome</label>
-     <%= f.text_field :name %>
-  </fieldset>
-<fieldset>
+    <%= f.text_field :name %>
+    
 
-<label>E-mail</label>
-<%= f.text_field :email %>
-</fieldset>
+    <label>E-mail</label>
+    <%= f.text_field :email %>
+    
 
- <fieldset>
-<label>Assunto</label>
-<%= f.text_field :title %>
- </fieldset>
- <fieldset>
-<label>Mensagem</label>
-<%= f.text_area :body  %>
- </fieldset>
+    
+    <label>Assunto</label>
+    <%= f.text_field :title %>
+   
+    <label>Mensagem</label>
+    <%= f.text_area :body  %>
+   
 
- <p><%= f.captcha %></p>
- 
-  <p class="button-style">
-  
+    <p><%= f.captcha %></p>
+
+    <p >
+
     <%= f.submit 'Enviar contato' , :class => 'button-erlon' %>
-  <%= link_to root_path do %>
-       Inicio
-    <% end %></p>
-<% end %>
-
-
- 
-</div>
-</section>
-</div>
-</div>
-<div class="3u">
-<div id="sidebar2">
-
-<%= render 'pages/sidebar2' %>
-
+    <%= link_to root_path do %>
+    Cancelar
+    <% end %>
+  </p>
+    <% end %>
 
 </div>
+
+<h2>Erlon Carlos</h2>
+<p>
+Avenida Olímpica, 2329 A<br>
+Cacimba do Povo, Aracati-CE<br>
+Fone: (88) 9652-4411</p>
+<h2>
+Somos uma agência web especializada no desenvolvimento de sites institucionais, blog e sistemas integrados.</h2>
 </div>
+
+
+<div class="column">
+<%= render 'layouts/sidebar' %>
 </div>
+<br class="clear" />
 </div>
-</div>
+
+

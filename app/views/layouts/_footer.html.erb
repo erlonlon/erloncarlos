@@ -1,43 +1,67 @@
-<div class="3u">
-<section id="box1">
-<h2>Posts Recentes</h2>
-<ul class="style3">
-	<% @post_recentes.each do |p| %>
-<li class="first">
-<p class="date"><%= p.published.strftime("%d de %b - %y ") %></p>
-<%= link_to post_path(p) do %>
+  <div id="footer">
+     <div class="footbox">
+      <h2>Publicidade</h2>
+      <ul>
+        <li><script type="text/javascript">
+  bb_bid = "1680108";
+  bb_lang = "pt-BR";
+  bb_name = "custom";
+  bb_limit = "4";
+  bb_format = "bbl";
+</script>
+<script type="text/javascript" src="http://static.boo-box.com/javascripts/embed.js"></script></li>
+       
+        <li class="last"><script type="text/javascript">
+  bb_bid = "1680108";
+  bb_lang = "pt-BR";
+  bb_name = "custom";
+  bb_limit = "4";
+  bb_format = "bbl";
+</script>
+<script type="text/javascript" src="http://static.boo-box.com/javascripts/embed.js"></script></li>
+      </ul>
+    </div>
+    <div class="footbox">
+      <h2>Ùltimas Notícias</h2>
+    <% @post_recentes.each do |p| %>
+    <ul>
+        <li>  <%= link_to post_path(p) do %>
+      <%= p.title %>
+      <% end %></li>
+  </ul>
+    <% end %>
+    </div>
+   
+    <div class="footbox last">
+      <h2>Links de sites</h2>
+      <ul>
+        <li><a href="http://www.akitaonrails.com/" target="_blamk">www.akitaonrails.com</a></li>
+       <li><a href="http://www.milfont.org/" target="_blamk">www.milfont.org</a></li>
+        <li><a href="http://www.rubyonrails.com.br/" target="_blamk">www.rubyonrails.com.br</li>
+       <li><a href="http://www.maujor.com/index.php" target="_blamk">www.maujor.com</li>
+       <li><a href="http://railsgirls.com/" target="_blamk">railsgirls.com</li>
+      <li><a href="http://www.abstraindo.com/" target="_blamk">www.abstraindo.com</li>
+       <li><a href="http://jquery.com/" target="_blamk">jquery.com</li>
+       <li><a href="https://github.com/erlonlon" target="_blamk">github.com</li>
+       <li><a href="https://www.facebook.com/erlonlon" target="_blamk">www.facebook.com</li>
+       <li><a href="https://twitter.com/erlonlon" target="_blamk">twitter.com</li>
+       <li><a href="http://notebooktech.com.br/" target="_blamk">notebooktech.com.br</li>
+       <li><a href="https://plus.google.com/u/0/b/107532173948096917499/" target="_blamk">plus.google.com</li>
 
-	<%= p.title %> 
-  <% end %>
+        <li class="last"> <script id="_wau5tw">var _wau = _wau || [];
+_wau.push(["colored", "ny9wpns7cmdh", "5tw", "ff4500ffffff"]);
+(function() {var s=document.createElement("script"); s.async=true;
+s.src="http://widgets.amung.us/colored.js";
+document.getElementsByTagName("head")[0].appendChild(s);
+})();</script></li>
+      </ul>
+    </div>
+    <div class="thumbbox">
+      <h2>Conectado ao Facebook</h2>
+      <ul>
+        <li>
 
-</li>
-<% end %>
-</ul>
-</section>
-</div>
-<div class="6u">
-<section id="box2">
-<h2>Últimas notícias do portal</h2>
-
-<% @posts_rodape.each do |p|  %>
-<div class="border-img"> 
-	
-  <%= textilize p.subtitle %>
-
- 
-	
-
-</div>
-<% end %>
-</section>
-</div>
-<div class="3u">
-<section id="box3">
-<h2>Galera no Facebook</h2>
-
-<div id="fb-root"></div>
-<div id="fb-root"></div>
-<div id="fb-root"></div>
+       <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -46,6 +70,27 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<div class="fb-like-box" data-href="https://www.facebook.com/pages/Erlon-Carlos/564301506921492" data-width="292" data-show-faces="true" data-stream="false" data-header="true"></div>
-</section>
-</div>
+<div class="fb-like-box" data-href="https://www.facebook.com/pages/Erlon-Carlos/564301506921492?ref=tn_tnmn" data-width="297" data-height="260" data-show-faces="true" data-stream="false" data-header="false"></div>
+
+<!-- Place this tag where you want the badge to render. -->
+<div class="g-plus" data-href="//plus.google.com/107532173948096917499" data-rel="publisher"></div>
+
+<!-- Place this tag after the last badge tag. -->
+<script type="text/javascript">
+  window.___gcfg = {lang: 'pt-BR'};
+
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+
+        </li>
+        
+      </ul>
+      <br class="clear" />
+    </div>
+    <br class="clear" />
+  </div>

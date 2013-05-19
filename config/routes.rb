@@ -1,6 +1,19 @@
 Erloncarlos::Application.routes.draw do
+ 
+
   
+
+ 
+
+   resources :contacts
+   resources :posts
+   resources :clients
+   resources :abouts
+   resources :services
+   resources :galleries
+   root :to => "pages#index"
   
+
 scope '/admin' do
 
   devise_for :users, :controllers => {
@@ -11,12 +24,6 @@ scope '/admin' do
 
 end
   
-
-   resources :contacts
-   resources :posts
-
-  root :to => "pages#index"
-
   namespace :admin do
       resources :categories
       resources :contacts

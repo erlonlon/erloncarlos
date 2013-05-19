@@ -28,7 +28,9 @@
       <div class="submit_link">
       <%= f.submit 'Salvar registro',:class => 'alt_btn' %>
     
-      <input type="submit" value="Reset">
+    <%= link_to admin_categories_path do %>
+Cancelar
+<% end %>
       </div>
       </footer>
   <% end %>  

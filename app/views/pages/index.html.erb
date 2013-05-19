@@ -1,61 +1,36 @@
-<div class="5grid-layout">
-<div class="row">
-<div class="12u">
-<div id="banner">
-<!-- barner slider-->
-<%= render 'pages/banner' %>
-
-</div>
-</div>
-</div>
-<div class="5grid-layout">
-<div class="row">
-<div class="3u" id="sidebar1">
-<%= render 'pages/sidebar1' %>
-</div>
-<div class="6u mobileUI-main-content">
-<div id="content">
-
-<section>
-<div class="post">
-
-	<h2>Simples ideias na web</h2>
-	<p>Bem vindo ao meu site pessoal, aqui você pode encontrar algumas dicas principalmente da área de TI.</p>
-	<p>Essas dicas de estudos que aprendemos ou achamos na internet e que muito nos serviram e pode também ajudar vocês.</p>
-	<p>
-	A seção de vídeos tem desde vídeos sobre assuntos específicos dentro de suas respectivas categorias como também vídeos engraçados disponíveis na web.
-	</p>
-	<p>
-	Na seção de links existem alguns links que achei interessantes sobre diversos assuntos.</p>
-
-	<p>&nbsp; </p>
-	
-<h2>Metodologias Ágeis</h2>
-<p>
-Utilizamos metodologias ágeis no desenvolvimento de nossos sistemas, garantindo satisfação do cliente, entrega rápida e contínua.
-	</p>
-	<p>&nbsp; </p>
-	<h2>Ruby on Rails</h2>
-	<p>
-Ruby on Rails é um framework de desenvolvimento web otimizado para a produtividade sustentável. Ele torna mais fácil o desenvolvimento, implantação e manutenção dos sistemas.
-	</p>
-	<p>Desenvolvemos sistemas web sob medida para você e para sua empresa.</p>
-	<%= image_tag "rails.png" %>
-	 <p class="button-style"><%= link_to root_path do %>
-       Inicio
-    <% end %></p>
-</div>
-</section>
-</div>
-</div>
-<div class="3u">
-<div id="sidebar2">
-
-<%= render 'pages/sidebar2' %>
+  <div id="featured_intro">
+    <div>
+      <p>Somos uma agência web especializada no desenvolvimento de sites institucionais, blog e sistemas integrados.
+Já estamos no mercado com boa aceitação com alguns projetos entregues, a <a href="http://erloncarlos.com">Agência Erlon Carlos</a> tem o objetivo de fazer com que o seu negócio alcance novos limites e seja reconhecido no mercado.
+Para isso contamos com uma equipe de profissionais certificados e experientes para atender todas as necessidades de seu negócio, desde o atendimento pesonalizado até o pós-venda. </p>
+    </div>
+  </div>
 
 
-</div>
-</div>
-</div>
-</div>
-</div>
+ <div id="latest">
+    <ul>
+      <li>
+        <h2>Criação de Sites</h2>
+        <p class="imgholder"><%= image_tag "criacao.jpg" %></p>
+        <p>Nossos serviços de criação de sites, ajuda sua empresa a se destacar na Internet, com qualidade e profissionalismo, entregamos cada projeto com o que a de melhor em tecnologia, posicionamos seu site nos buscadores melhores do mercado e com resultados.   <%= link_to contacts_path do %>
+         Orçamento &raquo;<% end %></p>
+      </li>
+      <li>
+        <h2>E-Mail Marketing</h2>
+        <p class="imgholder"><%= image_tag "emailmarketing.png" %></p>
+        <p>O E-mail Marketing é uma importante ferramenta de comunicação e relacionamento entre as empresas e seus clientes.
+          Comunique-se e mantenha seus clientes informados sobre sua marca e produtos.Crie promoções e divulgue ofertas para aumentar suas vendas e fazer sua empresa crescer!
+
+         <%= link_to contacts_path do %>
+         Orçamento &raquo;<% end %></p>
+      </li>
+      <li class="last">
+        <h2>Atualização de Sites</h2>
+        <p class="imgholder"><%= image_tag "manutencao.jpg" %></p>
+        <p>Se sua empresa já tem um website e necessita de uma reformulação este é o serviço certo, vamos analisar e levantar o que pode ser melhorado no seu site como layout, código e usabilidade para atrair mais clientes.    <%= link_to contacts_path do %>
+         Orçamento &raquo;<% end %></p>
+      </li>
+    </ul>
+    <br class="clear" />
+  </div>
+

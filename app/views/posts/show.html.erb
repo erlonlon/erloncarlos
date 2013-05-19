@@ -1,48 +1,28 @@
-<div class="5grid-layout">
-<div class="row">
-<div class="12u">
-<div id="banner">
-<!-- barner slider-->
-<%= render 'pages/banner' %>
 
-</div>
-</div>
-</div>
-<div class="5grid-layout">
-<div class="row">
-<div class="3u" id="sidebar1">
-<%= render 'pages/sidebar1' %>
-</div>
-<div class="6u mobileUI-main-content">
-<div id="content">
+  <div class="container">
+    <div class="content">
 
-<section>
-<div class="post">
+      <h1> <%= @post.title %></h1>
+      <p class="date"><%= @post.published.strftime("%d de %b - %y ") %></p>
 
-	<h2><%= @post.title %></h2>
-	<p class="date"><%= @post.published.strftime("%d de %b - %y ") %></p>
-	
-	<label>Endereço do site: <a href="<%= @post.url %>" target="_blank"><%= @post.url %></a></label>
-<p>&nbsp; </p>
-	<p><%= textilize @post.body %></p>	
+   <label>Endereço do site: <a href="<%= @post.url %>" target="_blank"><%= @post.url %></a></label>
+     
+     <p>&nbsp; </p>
+     
+  <p><%= textilize @post.body %></p>  
 
-	<p>&nbsp; </p>
-	
-	 <p class="button-style"><%= link_to root_path do %>
+  <p>&nbsp; </p>
+  
+   <p class="button-style"><%= link_to root_path do %>
        Inicio
     <% end %></p>
-</div>
-</section>
-</div>
-</div>
-<div class="3u">
-<div id="sidebar2">
+     
+    </div>
+    <div class="column">
 
-<%= render 'pages/sidebar2' %>
+      
+    <%= render 'layouts/sidebar' %>
+    </div>
+    <br class="clear" />
+  </div>
 
-
-</div>
-</div>
-</div>
-</div>
-</div>

@@ -6,8 +6,21 @@
 <%= favicon_link_tag 'favicon_atual.ico' %>
 <%= stylesheet_link_tag    "application", :media => "all" %>
 <%= javascript_include_tag "application" %>
- <%= javascript_include_tag "slides.min.jquery" %> 
-    <%= javascript_include_tag "slides.jquery" %> 
+<%= javascript_include_tag "jquery.nivo.slider.pack" %>
+<%= javascript_include_tag "jquery.nivo.slider.setup" %>
+<%= javascript_include_tag "jquery.nivo.slider " %>
+
+ <%= javascript_include_tag "lightbox" %>
+
+
+
+
+
+
+<!--[if lt IE 8]>
+<style type="text/css" media="screen">.nivo-controlNav a{float:left;}</style>
+<![endif]-->
+
 
 <%= csrf_meta_tags %>
 
@@ -29,44 +42,51 @@
 
 <!--google analitico-->
 
-<script>
-		$(function(){
-			$('#slides').slides({
-				preload: true,
-			    preloadImage: '<%= image_tag "loading.gif" %>',
-				play: 5000,
-				pause: 2500,
-				hoverPause: true
-			});
-		});
-	</script>
+
 
 </head>
-<body class="homepage">
-<div id="wrapper">
-<header id="header">
-	<%= render 'layouts/header' %>
-</header>
-<div id="page">
-	
-	<%= yield %>
+
+<body id="top">
+  <!--logo da empresa -->
+<div class="wrapper col1">
+ <%= render 'layouts/topologo' %>
+</div>
+<!-- fecha logo da empresa -->
+
+<!--menu topo -->
+<div class="wrapper col2">
+ <%= render 'layouts/menutopo' %>
+  
+</div>
+<!-- fecha menu topo -->
+ <!-- slide -->
+<div class="wrapper col3">
  
-
+  <%= render 'layouts/slide' %>
+ 
 </div>
+ <!-- fecha slide -->
+  <!-- conteudo dimanico -->
+<div class="wrapper col4">
+ <%= yield %>
 </div>
-<div class="5grid-layout">
-
-<div class="row" id="footer-content">
-	<%= render 'layouts/footer' %>
-
+ <!-- fecha conteudo dimanico -->
+  <!-- footer -->
+<div class="wrapper col5">
+ <%= render 'layouts/footer' %>
 </div>
+ <!-- fecha footer -->
+<!-- ####################################################################################################### -->
+<div class="wrapper col6">
+  <div id="copyright">
+    <p class="fl_left">Copyright &copy; 2013 - All Rights Reserved - <a href="http://www.erloncarlos.com" target="_blank">www.erloncarlos.com</a></p>
+    <p class="fl_right">Designer by <a href="http://erloncarlos.com" title=" Designer Website ">Erlon Carlos</a></p>
 
-</div>
-<div id="copyright" class="5grid-layout">
-<section>
- <p>&copy; Your Site Name | Images: <a href="http://www.erloncarlos.com" target="_blank">Fotogrph</a> | Design: <a href="http://www.erloncarlos.com" target="_blank">erloncarlos.com</a></p>
-</section>
+   
+    <br class="clear" />
+  </div>
 </div>
 </body>
+
 
 </html>

@@ -33,6 +33,9 @@ class ContactsController < ApplicationController
      @galleries = Gallery.find(:all, :limit => 6, :order=> 'created_at desc')
      @posts_rodape = Post.find(:all, :limit => 1)
       @post_recentes = Post.find(:all, :limit => 4)
+
+        @galleries_servicos = Type.find(3)
+       @galleries_eventos = Type.find(4)
   end
 
  

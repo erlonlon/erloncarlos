@@ -1,64 +1,41 @@
-<div class="5grid-layout">
-<div class="row">
-<div class="12u">
-<div id="banner">
-<!-- barner slider-->
-<%= render 'pages/banner' %>
 
-</div>
-</div>
-</div>
-<div class="5grid-layout">
-<div class="row">
-<div class="3u" id="sidebar1">
-<%= render 'pages/sidebar1' %>
-</div>
-<div class="6u mobileUI-main-content">
-<div id="content">
+<div class="container">
+<div class="content">      
 
-<section>
-<div class="post">
-	<% if @posts.present? %>
+<div id="comments">
+<h2>Ùltimas Notícias</h2>
+    <ul class="commentlist">
+    <% if @posts.present? %>
+      <% @posts.each do |p| %>         
 
-	<h2>Lista de artigos do site</h2>
-      <% @posts.each do |p| %>
-     
-     <p ><label>Data do Artigo:</label>
-<%= p.published.strftime("%d de %b - %y") %>
-     </p>
+      <li class="comment_odd">
+      <div class="author">            
+      <span class="name"><%= link_to post_path(p), :title => "Leia mais !" do %>
+      <%= p.title %>
+      <% end %></span>
 
-	<p id="titulopost"><%= link_to post_path(p), :title => "Leia mais !" do %>
-		<%= p.title %>
-  <% end %>
-	</p>
+      </div>
+      <div class="submitdate">
+      <%= p.published.strftime("%d de %b - %y") %>
 
-
-
-	
-	
-
-
-	
-	
+      </div>
+      <p><%= link_to post_path(p), :title => "Leia mais !" do %>
+      <%= textilize p.subtitle %>
+      <% end %></p>
+      </li>
+      <% end %>
     <% end %>
+    </ul>
 
-    <% end %>
 </div>
-<%= will_paginate @posts %>
- <p class="button-style"><%= link_to root_path do %>
-       Inicio
-    <% end %></p>
-</section>
-</div>
-</div>
-<div class="3u">
-<div id="sidebar2">
-
-<%= render 'pages/sidebar2' %>
+<div align="center"><%= will_paginate @posts %></div>
 
 
 </div>
+<div class="column">
+
+<%= render 'layouts/sidebar' %>
 </div>
+<br class="clear" />
 </div>
-</div>
-</div>
+
