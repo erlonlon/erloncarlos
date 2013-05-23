@@ -27,10 +27,10 @@ class ClientsController < ApplicationController
     @types = Type.paginate page: params[:page], :per_page => 2
     @type   = Type.find(params[:type_id]) if params[:type_id]
     #@galleries = Gallery.all   
-    @types_clientes = Type.find(2)
+     @types_clientes = Type.find(2)
    
      @galleries_servicos = Type.find(3)
-     @galleries_clientes = Type.find(5)
+     @galleries_eventos = Type.find(4)
 
 
 

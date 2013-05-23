@@ -17,6 +17,6 @@ class AboutsController < ApplicationController
       @galleries_servicos = Type.find(3)
 
        
-       @galleries_clientes = Type.find(5)
+       @galleries_eventos = Type.find(4)
   end
 end

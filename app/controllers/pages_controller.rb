@@ -13,6 +13,6 @@ class PagesController < ApplicationController
      @posts_rodape = Post.find(:all, :limit => 1)
       @post_recentes = Post.find(:all, :limit => 4)
       @galleries_servicos = Type.find(3)
-       @galleries_clientes = Type.find(5)
+       @galleries_eventos = Type.find(4)
   end
 end
